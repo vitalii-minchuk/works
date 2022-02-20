@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(to bottom right, rgba(36, 51, 180, 1), rgba(210, 53, 165, 1));
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.calc {
+  position: relative;
+  height: auto;
+  width: 270px;
+  padding: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #111;
+  background-color: #ddd;
+  
+}
+.calc__screen {
+  margin: 0 10px;
+  height: 80px;
+  width: auto;
+  max-width: 270px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-items: end;
+  align-items: flex-end;
+}
+.calc__display {
+  overflow-x: auto;
+  margin-left: auto;
+  color: #0a1e23;
+}
+.btn {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  box-shadow: 5px 5px 5px #111;
+  background-color: #ffd0fd;
+  color: #f967f3;
+}
+.btn:hover {
+  filter: brightness(90%);
+}
+.btn:active {
+  transform: scale(97%);
+  box-shadow: 2px 2px 5px #111;
+}
+.calc__btns {
+  display: grid;
+  grid-template-areas:
+  'reset divide mult del'
+  'seven eight nine minus'
+  'four five six plus'
+  'one two three equal'
+  'zero zero dot equal';
+  gap: 8px;
+}
+.zero {
+  grid-area: zero;
+  width: 100%;
+  border-radius: 35px;
+
+}
+.equal {
+  grid-area: equal;
+  height: 100%;
+  border-radius: 35px;
+  background-color: #adf9e7;
+  color: #0a1e23;
+}
+.reset, .del {
+  background-color: #ffd5d8;
+  color: #fc4552;
+}
+.number {
+  background-color: #c3eaff;
+  color: #f967f3
+}
